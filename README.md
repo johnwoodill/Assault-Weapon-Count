@@ -2,8 +2,14 @@
 
 After the horrible tragedy in Las Vegas on Sunday night, I wanted to know if there was a trend associated with assault weapons and mass shootings. In particular, what happened after the assault weapons ban from 1994-2004? 
 
+Data
+
+The data is from [US Mass Shootings, 1982-2017: Data From Mother Jones’ Investigation](http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/). I counted the total number of assault rifles for each event and added as a new variable. Since we don't know excactly how many weapons were used during the recent Las Vegas event, I coded the event as three since that is what has been confirmed as assault weapons.
+
+
 R Code:
 
+```r
 library(dplyr)
 library(ggplot2)
 library(ggthemes)
@@ -53,7 +59,7 @@ ggplot(newdat, aes(Year, Fatalities)) + scale_fill_brewer("GnBu")+
   theme(legend.position = c(0,1), legend.justification = c("left", "top"), 
         legend.box.background = element_rect(colour = "grey"), legend.key = element_blank(),
         legend.title = element_blank()) 
-
+```
   
 
 
