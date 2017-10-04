@@ -1,4 +1,4 @@
-# Assault-Weapon-Count
+# Mass Shootings and Assault Weapons 1982-2017 
 
 After the horrible tragedy in Las Vegas on Sunday night, I wanted to know if there was a trend associated with assault weapons and mass shootings. In particular, what happened after the assault weapons ban from 1994-2004? 
 
