@@ -70,7 +70,7 @@ newdat$event[32] <- "James Huberty, San Ysidro \n 22 killed"
 
 
 ggplot(newdat, aes(Year, Fatalities)) + 
-  geom_rect(aes(xmin=1994, xmax=2004, ymin=-Inf, ymax=Inf), alpha = 0.01, fill = "grey") +
+  geom_rect(aes(xmin=1994, xmax=2004, ymin=-Inf, ymax=Inf), fill = "gray95") +
   geom_label_repel(aes(label = event), color = 'black', size = 3.5, nudge_y = 7) +
   theme_tufte(base_size = 14) + 
   geom_point(aes(color = "Fatalities"), shape = 1, size = 2) + 
