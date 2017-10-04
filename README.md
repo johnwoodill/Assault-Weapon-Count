@@ -114,8 +114,6 @@ ggplot(newdat, aes(Year, Fatalities)) +
                      guide = guide_legend(override.aes = list(linetype = c(rep("blank", 3)),
                                                               shape = c(16, 1, 16))))
 ```
-  
-
 
 ![alt text](https://github.com/johnwoodill/Assault-Weapon-Count/blob/master/assault_weapons.png)
 
