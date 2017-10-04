@@ -76,7 +76,6 @@ newdat <- newdat %>%
 
 newdat <- left_join(newdat, cens, by = "Year")
 
-
 # Weight by population
 newdat$Fatalities <- newdat$Fatalities/((newdat$pop/100000000))
 newdat$mh <- ifelse(newdat$mh == 1, newdat$Fatalities, NA)
@@ -90,7 +89,6 @@ newdat$event[5] <- "Adam Lanza, Newtown \m 28 killed"
 newdat$event[11] <- "Seung-Hui Cho, Virginia Tech \n 32 killed"
 newdat$event[26] <- "George Hennard, Killeen TX \n 24 killed"
 newdat$event[32] <- "James Huberty, San Ysidro \n 22 killed"
-
 
 ggplot(newdat, aes(Year, Fatalities)) + 
   geom_label_repel(aes(label = event), color = 'black', size = 3.5, nudge_y = 7) +
