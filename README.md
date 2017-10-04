@@ -115,5 +115,6 @@ ggplot(newdat, aes(Year, Fatalities)) +
                                                               shape = c(16, 1, 16))))
 ```
 
+
 ![alt text](https://github.com/johnwoodill/Assault-Weapon-Count/blob/master/assault_weapons.png)
 
