@@ -8,10 +8,15 @@ The data is from [US Mass Shootings, 1982-2017: Data From Mother Jones’ Invest
 
 **Variables**
 
-*Assault Weapons*: number of assault weapons used in each year. Data describes weapon as rifle (assault).
-*Fatalities*: fatalities per 100 million people summed over year
-*Fatalities (sign of mental health)*: fatalities per 100 million people summed over year. Indicator of sign of mental health described in data as yes -- does not include unclear.
-*Events*: events over 20 killed are labeled by year
+*Assault Weapons*: number of assault weapons used in each year. Data describes weapon as "rifle (assault)"
+
+*Fatalities*: fatalities per 100 million people summed over individual year
+
+*Fatalities (sign of mental health)*: fatalities per 100 million people summed over individual year. Indicator for sign of mental health described in data as "yes" -- does not include "unclear."
+
+*Events*: events over 20 killed are labeled in box by year
+
+*Population*: U.S. population data from FRED. Population for 2017 was estimated based on the growth rate from the last 10 years.
 
 **R Code:**
 
