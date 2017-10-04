@@ -4,7 +4,9 @@ After the horrible tragedy in Las Vegas on Sunday night, I wanted to know if the
 
 **Data**
 
-The data is from [US Mass Shootings, 1982-2017: Data From Mother Jones’ Investigation](http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/). I counted the total number of assault rifles for each event and added as a new variable. Since we don't know excactly how many weapons were used during the recent Las Vegas event, I coded the event as three since that is what has been confirmed as assault weapons.
+The mass shooting data is from [US Mass Shootings, 1982-2017: Data From Mother Jones’ Investigation](http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/). Total number of assault rifles for each event were counted and added as a new variable. Since we don't know excactly how many weapons were used during the recent Las Vegas event,the event was coded as three since that is what has been confirmed as assault weapons [Source](https://www.washingtonpost.com/news/checkpoint/wp/2017/10/02/video-from-las-vegas-suggests-automatic-gunfire-heres-what-makes-machine-guns-different/). 
+
+Population data is from [FRED: Population, Total for United States](https://fred.stlouisfed.org/series/POPTOTUSA647NWDB). Population for 2017 was estimated based on the growth rate from the last 10 years.
 
 **Variables**
 
@@ -15,8 +17,6 @@ The data is from [US Mass Shootings, 1982-2017: Data From Mother Jones’ Invest
 *Fatalities (sign of mental health)*: fatalities per 100 million people summed over individual year. Indicator for sign of mental health described in data as "yes" -- does not include "unclear."
 
 *Events*: events over 20 killed are labeled in box by year
-
-*Population*: U.S. population data from FRED. Population for 2017 was estimated based on the growth rate from the last 10 years.
 
 **R Code:**
 
