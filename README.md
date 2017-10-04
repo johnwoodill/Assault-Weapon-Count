@@ -91,17 +91,18 @@ newdat$event[26] <- "George Hennard, Killeen TX \n 24 killed"
 newdat$event[32] <- "James Huberty, San Ysidro \n 22 killed"
 
 ggplot(newdat, aes(Year, Fatalities)) + 
+  geom_rect(aes(xmin=1994, xmax=2004, ymin=-Inf, ymax=Inf), fill = "gray95") +
   geom_label_repel(aes(label = event), color = 'black', size = 3.5, nudge_y = 7) +
   theme_tufte(base_size = 14) + 
   geom_point(aes(color = "Fatalities"), shape = 1, size = 2) + 
   geom_point(aes(Year, mh, color = "Fatalities (signs of mental health)"), shape = 16, size = 2) +
   geom_point(aes(Year, AWeapons*10, color = "Assault Weapons"), size = 2) +
-  geom_vline(xintercept = 1994, linetype = "dashed", color = "grey") + 
-  geom_vline(xintercept = 2004, linetype = "dashed", color = "grey") + 
-  annotate("text", x = 1999, y = 50, label = "Assault Weapons Ban") +
+  #geom_vline(xintercept = 1994, linetype = "dashed", color = "grey") + 
+  #geom_vline(xintercept = 2004, linetype = "dashed", color = "grey") + 
+  annotate("text", x = 1999, y = 50, label = "Assault Weapons Ban \n (1994 - 2004)") +
   geom_smooth(aes(color = "Fatalities"), se = FALSE,  size = .5) + 
   geom_smooth(aes(Year, AWeapons*10, color = "Assault Weapons"), se = FALSE,  size = .5) +
-  xlab(NULL) + ylab("Fatalaties \n (per 100 million)") +
+  xlab(NULL) + ylab("Fatalities \n (per 100 million)") +
   scale_y_continuous(sec.axis = sec_axis( ~./10, name = "Assault Weapons Count")) +
   scale_x_continuous(breaks = seq(1982, 2017, by = 5)) +    
   theme(legend.position = c(0,1), 
@@ -112,7 +113,8 @@ ggplot(newdat, aes(Year, Fatalities)) +
         panel.border = element_rect(colour = "grey", fill=NA, size=1)) +
   scale_color_manual(values = c("#ef8a62", "#67a9cf", "#67a9cf"),
                      guide = guide_legend(override.aes = list(linetype = c(rep("blank", 3)),
-                                                              shape = c(16, 1, 16))))
+                                                              shape = c(16, 1, 16),
+                                                              size = c(3, 3, 3)))) 
 ```
 
 
