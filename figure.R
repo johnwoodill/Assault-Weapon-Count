@@ -74,12 +74,13 @@ ggplot(newdat, aes(Year, Fatalities)) +
   geom_label_repel(aes(label = event), color = 'black', size = 3.5, nudge_y = 7) +
   theme_tufte(base_size = 14) + 
   geom_point(aes(color = "Fatalities"), shape = 1, size = 2) + 
+  geom_line(aes(color = "Fatalities"), shape = 1, size = 1) + 
   geom_point(aes(Year, mh, color = "Fatalities (signs of mental health)"), shape = 16, size = 2) +
   geom_point(aes(Year, AWeapons*10, color = "Assault Weapons"), size = 2) +
   geom_vline(xintercept = 1994, linetype = "dashed", color = "grey", alpha = 0.5) + 
-  geom_vline(xintercept = 2004, linetype = "dashed", color = "grey", alpha = 0.5) + 
+  geom_vline(xintercept = 2004, linetype = "dashed", color = "grey") + 
   annotate("text", x = 1999, y = 50, label = "Assault Weapons Ban \n (1994 - 2004)") +
-  geom_smooth(aes(color = "Fatalities"), se = FALSE,  size = .5) + 
+  #geom_smooth(aes(color = "Fatalities"), se = FALSE,  size = .5) + 
   geom_smooth(aes(Year, AWeapons*10, color = "Assault Weapons"), se = FALSE,  size = .5) +
   xlab(NULL) + ylab("Fatalities \n (per 100 million)") +
   scale_y_continuous(sec.axis = sec_axis( ~./10, name = "Assault Weapons Count")) +
@@ -94,3 +95,4 @@ ggplot(newdat, aes(Year, Fatalities)) +
                      guide = guide_legend(override.aes = list(linetype = c(rep("blank", 3)),
                                                               shape = c(16, 1, 16),
                                                               size = c(3, 3, 3)))) 
+
